@@ -1,0 +1,62 @@
+<!doctype html>
+<html class='no-js {% if use_new_color_scheme %}dashboard-container{% endif %}' lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='x-ua-compatible' content='ie=edge'>
+  <title>{{ title }}</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <link rel='stylesheet' href='//unpkg.com/bootswatch@4.5.3/dist/cyborg/bootstrap.min.css'>
+</head>
+
+<body>
+  <div class='container'>
+    <h1 class="mt-3">{{ title }}</h1>
+    <p class="lead mb-3">
+      <!-- “It’s rainin’ Celtic’s predictions, bro.” -Jay King -->
+      "Rainin’ Predictions is the dark house of Celtic’s prediction websites, bro." -Jay King
+    </p>
+    <h3 class='text-center mb-3'>
+    <div class='row'>
+      <div class='col'>
+        John<br> {{ record.john.W }}-{{ record.john.L }}
+      </div>
+      <div class='col'>
+        Jay<br> {{ record.jay.W }}-{{ record.jay.L }}
+      </div>
+      <div class='col'>
+        Jam<br> {{ record.jam.W }}-{{ record.jam.L }}
+      </div>
+    </div></h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Opponent</th>
+          <th>Time</th>
+          <th>John</th>
+          <th>Jay</th>
+          <th>Jam</th>
+          <th>Result</th>
+          <th style="width: 15em;">Extra</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in table %}
+        <tr>
+          {% for val in row %}
+          <td>{{ val }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <script src="//unpkg.com/frappe-charts@1.2.4/dist/frappe-charts.min.iife.js"></script>
+  <script src="//unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="//unpkg.com/lodash@4.17.20/lodash.min.js"></script>
+  <script src="//unpkg.com/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+  <script src="/main.js"></script>
+</body>
+
+</html>
