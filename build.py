@@ -31,7 +31,7 @@ def get_prediction(game, j):
 
 
 def get_result(game):
-    return random.choice(["W", "L"])
+    # return random.choice(["W", "L"])
     winner = game.get("winner")
     if not winner:
         return None
