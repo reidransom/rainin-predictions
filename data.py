@@ -1,18 +1,18 @@
 PREDICTIONS = {
     "7": {
-        "john": "W",
-        "jay": "W",
-        "jam": "L",
+        "john": ("W", "Jay Tatum 40pts, Yannis extension rumors"),
+        "jay": ("W", "Over-reaction to Grant William starting forward, 0-3 from 3, makes winning plays"),
+        "jam": ("L", "Yannis pissed off, Dru angry for some reason"),
     },
     "18": {
-        "john": "L",
-        "jay": ("L", "107-104"),
-        "jam": "W",
+        "john": ("L", "Kyrie revenge game"),
+        "jay": ("L", "107-104, KD awesome, playing the 5"),
+        "jam": ("W", "Can't let Kyrie win like that"),
     },
     "37": {
-        "john": "W",
-        "jay": "W",
-        "jam": "W",
+        "john":("W", "Split"),
+        "jay": ("W", "Jeff Teague revenge factor"),
+        "jam": ("W", "Celtic's sweep"),
     },
     "48": {
         "john": "L",
@@ -20,9 +20,9 @@ PREDICTIONS = {
         "jam": "W",
     },
     "56": {
-        "john": "W",
-        "jay": "W",
-        "jam": "W",
+        "john": ("W", "Memphis overacheived last year"),
+        "jay": ("W", "Ja Morant is really good, but Memphis is bad"),
+        "jam": ("W", "Memphis Zoo purchases Ja-Raffe"),
     },
     "70": {
         "john": "W",
@@ -30,29 +30,29 @@ PREDICTIONS = {
         "jam": "W",
     },
     "85": {
-        "john": "W",
+        "john": ("W", "No doubt"),
         "jay": "W",
-        "jam": "L",
+        "jam": ("L", "Detroit casino or something else bad happens"),
     },
     "97": {
-        "john": "L",
-        "jay": "L",
-        "jam": "W",
+        "john": ("L", "Playoff revenge game"),
+        "jay": ("L", "Alex Lin, bro"),
+        "jam": ("W", "Will they be in St. Pete?"),
     },
     "111": {
-        "john": "W",
-        "jay": "L",
-        "jam": "L",
+        "john": ("W", "Revenge game!"),
+        "jay": ("L", "Heat need Bam to take another level. Semi 21 pts"),
+        "jam": ("L", "Celtics won't be ready for the zone"),
     },
     "124": {
-        "john": "W",
-        "jay": "W",
+        "john": ("W", "135-125"),
+        "jay": ("W", "Wizards not good at basketball, but Westbrook is awesome."),
         "jam": "W",
     },
     "145": {
         "john": "W",
-        "jay": "W",
-        "jam": "W",
+        "jay": ("W", "Aaron Nesmith scores 53 points or less than 6 points"),
+        "jam": ("W", "Celtics figure it out, Blue Crew pumps up Cs"),
     },
     "160": {
         "john": "W",
