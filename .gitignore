@@ -1,0 +1,14 @@
+.gitconfig
+*.pyc
+*.pyo
+.DS_Store
+*.DS_Store
+ignore
+.ipynb_checkpoints
+*.ipynb
+.pytest_cache
+.idea/
+.vscode/
+venv/
+*.swp
+.venv/

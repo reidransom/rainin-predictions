@@ -1,18 +1,14 @@
 import random
 from copy import deepcopy
 from datetime import datetime
-from pathlib import Path
-from os.path import dirname, abspath
 
 import requests
 import xmltodict
 from jinja2 import Environment, FileSystemLoader, select_autoescape, Markup
 
+import config
 from data import PREDICTIONS
 
-BASE_DIR = Path(dirname(abspath(__file__)))
-TMPL_DIR = BASE_DIR / "templates"
-DIST_DIR = BASE_DIR / "dist"
 
 
 def get_date(game):
@@ -32,7 +28,6 @@ def get_prediction(game, j):
 
 
 def get_result(game):
-    # return random.choice(["W", "L"])
     winner = game.get("winner")
     if not winner:
         return None
@@ -52,7 +47,7 @@ def get_extra(game):
 
 
 env = Environment(
-    loader=FileSystemLoader(TMPL_DIR),
+    loader=FileSystemLoader(config.TMPL_DIR),
     autoescape=select_autoescape(["html", "xml"])
 )
 
@@ -96,5 +91,5 @@ context = {
     "season": season,
 }
 
-with open(DIST_DIR / "index.html", "w") as fp:
+with open(config.DIST_DIR / "index.html", "w") as fp:
     fp.write(tmpl.render(**context))
