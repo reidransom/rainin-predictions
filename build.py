@@ -22,7 +22,7 @@ def get_opponent(game):
     if game["home"] == "BOS":
         opp = game["away"]
         place = "vs"
-    html = f"{place} <img class='opp' src='/img/{opp}.png' /> {opp}"
+    html = f"{place} <img class='opp' src='img/{opp}.png' /> {opp}"
     html = Markup(html)
     return html
 
