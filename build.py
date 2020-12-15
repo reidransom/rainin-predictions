@@ -1,4 +1,5 @@
 import random
+from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
 from os.path import dirname, abspath
@@ -64,6 +65,7 @@ record = {
     "jay": {"W": 0, "L": 0},
     "jam": {"W": 0, "L": 0},
 }
+season = deepcopy(record)
 for game in data["FantasyBasketballNerd"]["Game"]:
     date = get_date(game)
     rdata = {
@@ -71,6 +73,8 @@ for game in data["FantasyBasketballNerd"]["Game"]:
         "jay": get_prediction(game, "jay"),
         "jam": get_prediction(game, "jam"),
     }
+    for j in record.keys():
+        season[j][rdata[j]] += 1
     result = get_result(game)
     if result:
         for j in record.keys():
@@ -89,6 +93,7 @@ context = {
     "title": "Rainin’ Predictions",
     "table": table,
     "record": record,
+    "season": season,
 }
 
 with open(DIST_DIR / "index.html", "w") as fp:
