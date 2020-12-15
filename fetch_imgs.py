@@ -6,7 +6,7 @@ import config
 TEAMS = [
     "BOS",
     "BKN",
-    "BYK",
+    "ny",
     "PHI",
     "TOR",
     "CHI",
@@ -23,7 +23,7 @@ TEAMS = [
     "MIN",
     "OKC",
     "POR",
-    "UTA",
+    "utah",
     "GSW",
     "LAC",
     "LAL",
@@ -32,7 +32,7 @@ TEAMS = [
     "DAL",
     "HOU",
     "MEM",
-    "NOP",
+    "no",
     "SAS",
 ]
 

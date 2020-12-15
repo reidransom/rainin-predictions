@@ -17,7 +17,14 @@ def get_date(game):
 
 
 def get_opponent(game):
-    return "{away} at {home}".format(**game)
+    opp = game["home"]
+    place = "@"
+    if game["home"] == "BOS":
+        opp = game["away"]
+        place = "vs"
+    html = f"{place} <img class='opp' src='/img/{opp}.png' /> {opp}"
+    html = Markup(html)
+    return html
 
 
 def get_prediction(game, j):
@@ -75,7 +82,7 @@ for game in data["FantasyBasketballNerd"]["Game"]:
         for j in record.keys():
             record[j]["W" if result == rdata[j] else "L"] += 1
     table.append([
-        date.strftime("%b %d"),
+        date.strftime("%a, %b %d"),
         get_opponent(game),
         date.strftime("%-I:%M %p"),
         rdata["john"],
